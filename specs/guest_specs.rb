@@ -4,7 +4,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require_relative('../guest')
 
-class TestSong < Minitest::Test
+class TestGuest < Minitest::Test
 
   def setup
     @guest_1 = Guest.new("John", "Fairytale Of New York")
