@@ -37,6 +37,10 @@ class TestSong < Minitest::Test
     assert_equal("All I Want For Chritmas Is You", @song_1.name)
   end
 
+  def test_song_does_not_exist
+    
+  end
+
   #2
   def test_song_has_artist
     assert_equal("The Pogues", @song_3.artist)

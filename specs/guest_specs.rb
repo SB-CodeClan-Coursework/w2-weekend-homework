@@ -3,13 +3,15 @@ require('minitest/reporters')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require_relative('../guest')
+require_relative('../room')
+
 
 class TestGuest < Minitest::Test
 
   def setup
-    @guest_1 = Guest.new("John", "Fairytale Of New York")
-    @guest_2 = Guest.new("Philip", "I Wish It Could Be Christmas Everyday")
-    @guest_3 = Guest.new("Bob", "Ug")
+    @guest_1 = Guest.new("John", "Fairytale Of New York", 100)
+    @guest_2 = Guest.new("Philip", "I Wish It Could Be Christmas, Everyday", 200)
+    @guest_3 = Guest.new("Bob", "Ug", 300)
   end
 
   #1
@@ -23,8 +25,8 @@ class TestGuest < Minitest::Test
   end
 
   # #3
-  # def test_guest_has_?
-  #   assert_equal("?", @guest_2.location)
-  # end
+  def test_guest_has_cash
+    assert_equal(100, @guest_1.cash)
+  end
 
 end
