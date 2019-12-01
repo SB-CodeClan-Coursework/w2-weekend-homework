@@ -1,10 +1,8 @@
-class Guest
+class Karaokebar
 
-  attr_reader :name, :fav_song, :cash
+  attr_reader 
 
-  def initialize(name, fav_song, cash)
-    @name = name
-    @fav_song = fav_song
-    @cash = cash
+  def initialize()
+
   end
 end
