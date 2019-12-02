@@ -20,9 +20,5 @@ class TestRoom < Minitest::Test
   def test_room_has_style
     assert_equal("Christmas", @room_2.room_style)
   end
-
-  def test_guest_class_is_being_passed_to_room_class
-    assert_equal("John", @guest_1.name)
-  end
   
 end
